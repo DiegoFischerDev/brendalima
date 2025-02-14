@@ -176,6 +176,11 @@ body {
     .service-card {
         width: 100%; /* Garante que os cards ocupem toda a largura */
     }
+
+    .hero {
+        background-size: contain; /* Ajusta o tamanho do background para que se encaixe sem distorcer */
+        background-attachment: scroll; /* Remove o efeito de paralaxe no mobile */
+    }
 }
 
 .service-cards {
