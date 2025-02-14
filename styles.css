@@ -1,116 +1,220 @@
-/* Reset some default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+    --cor-escura: #0c0f14;
+    --cor-destaque: #d1a965;
+    --cor-clara: #f1efec;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
-  padding: 20px;
+.navbar {
+    background-color: var(--cor-clara);
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  background: url('header-bg.jpg') no-repeat center center/cover;
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
+.logo {
+    font-size: 1.5em;
+    color: var(--cor-escura);
 }
 
-header h1 {
-  color: black;
-  font-size: 3em;
-  margin-bottom: 10px;
+.logo-img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o texto */
+    vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
 }
 
-header p {
-  font-size: 1.2em;
-  color: gray;
+.hero {
+    background-image: url('assets/turistas.jpg'); /* Substitua pelo caminho correto da imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Adiciona o efeito de paralaxe */
+    color: var(--cor-clara);
+    padding: 60px 20px;
+    text-align: left;
+    height: 100vh;
+    position: relative;
+    display: flex; /* Usando flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-nav {
-  background: #333;
-  color: #fff;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Efeito de opacidade */
+    z-index: 1; /* Coloca a camada de opacidade abaixo do texto */
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+.hero-content {
+    position: relative; /* Para que o texto fique acima da camada de opacidade */
+    z-index: 2; /* Coloca o texto acima da camada de opacidade */
+    max-width: 800px; /* Define uma largura máxima */
+    width: 100%; /* Garante que o conteúdo ocupe 100% da largura disponível até o máximo */
+    padding: 0 20px; /* Adiciona um pouco de padding lateral */
 }
 
-nav ul li {
-  margin: 0 15px;
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-nav ul li a {
-  display: block;
-  padding: 15px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
 }
 
-nav ul li a:hover {
-  background: #555;
+.subheadline {
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-section {
-  padding: 40px 0;
-  background: #fff;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+.problems {
+    background-color: var(--cor-clara);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Garante que a seção fique acima da camada de opacidade */
 }
 
-section:nth-of-type(even) {
-  background: #f9f9f9;
+.problems-content {
+    max-width: 1200px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza a seção */
 }
 
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
-  color: #333;
+.problems h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.service-item {
-  background: #e2e2e2;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
+.services {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left; /* Alinha os serviços à esquerda */
 }
 
-.service-item h3 {
-  margin-bottom: 10px;
-  color: #0056b3;
+.services li {
+    font-size: 1.2em;
+    margin: 5px 0; /* Espaçamento entre os itens da lista */
 }
 
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+.testimonials {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 60px 20px;
+    text-align: center;
 }
 
-footer p {
-  margin: 0;
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .service-item {
-    display: inline-block;
-    width: 45%;
-    margin: 2.5%;    
-  }
+.testimonial {
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: var(--cor-destaque);
+    color: var(--cor-escura);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.4em;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: var(--cor-clara);
+    color: var(--cor-destaque);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .problems h2 {
+        font-size: 1.5em;
+    }
+
+    .services li {
+        font-size: 1em; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    .testimonials h2 {
+        font-size: 1.5em;
+    }
+
+    .service-cards {
+        flex-direction: column; /* Altera a direção do flex para coluna */
+    }
+
+    .service-card {
+        width: 100%; /* Garante que os cards ocupem toda a largura */
+    }
+}
+
+.service-cards {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0; /* Ajuste a margem para que os cards fiquem um abaixo do outro */
+    width: 100%; /* Faz com que os cards ocupem toda a largura */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição suave */
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+.service-card img {
+    max-width: 100%;
+    height: 50%;
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Alinha a lista à esquerda */
 }
