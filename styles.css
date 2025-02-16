@@ -121,30 +121,6 @@ body {
     margin-bottom: 20px;
 }
 
-.services {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-    background-color: var(--cor-clara);
-    padding: 60px 20px;
-    text-align: center; /* Centraliza o conteúdo */
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.services h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.services-content {
-    max-width: 1200px; /* Define uma largura máxima */
-    margin: 0 auto; /* Centraliza a seção */
-}
-
 .testimonials {
     background-color: var(--cor-escura);
     color: var(--cor-clara);
@@ -214,14 +190,17 @@ body {
         margin: 10px 0;
     }
 
-    .services {
-        padding: 40px 10px;
+    .paralaxe {
+        background-image: url('assets/turistas_mobile.jpg');
     }
 
-    .service-card {
-        width: 100%; /* Os cards ocupam toda a largura disponível */
-        max-width: 300px; /* Mantém uma largura máxima */
+    .paralaxe h2 {
+        font-size: 32px;
     }
+}
+
+.service {
+    padding: 100px 0;
 }
 
 .service-cards {
@@ -245,6 +224,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.service h2 {
+    font-size: 32px;
+    text-align: center;
 }
 
 .service-card h3 {
