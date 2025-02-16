@@ -183,6 +183,12 @@ body {
         font-size: 40px;
         margin: 0;
     }
+
+    .familias-atendidas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
     
     .hero p {
         color: var(cor-escura);
@@ -255,4 +261,16 @@ body {
     list-style: none;
     padding: 0;
     text-align: left; /* Alinha a lista à esquerda */
+}
+
+.familias-atendidas {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+    color: var(--cor-destaque);
+}
+
+.familias-img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
 }
