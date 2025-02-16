@@ -74,7 +74,6 @@ body {
 }
 
 .paralaxe {
-    width: 100%;
     background-image: url('assets/turistas.jpg'); /* Substitua pelo caminho correto da imagem */
     background-size: cover;
     background-position: center;
