@@ -168,8 +168,12 @@ body {
         background-image: url('assets/hero_bg_mobile.jpg'); /* Imagem de fundo para mobile */
     }
 
-    ..familias-atendidas {
-        font-size: 14px;
+    .familias-atendidas {
+        font-size: 12px;
+    }
+
+    .familias-img {
+        height: 40px;
     }
 
     .hero .btn {
