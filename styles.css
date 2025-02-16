@@ -168,6 +168,10 @@ body {
         background-image: url('assets/hero_bg_mobile.jpg'); /* Imagem de fundo para mobile */
     }
 
+    ..familias-atendidas {
+        font-size: 14px;
+    }
+
     .hero .btn {
         margin-top: 20px;
     }
@@ -182,12 +186,6 @@ body {
         color: var(--cor-destaque);
         font-size: 40px;
         margin: 0;
-    }
-
-    .familias-atendidas {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
     }
     
     .hero p {
@@ -265,9 +263,12 @@ body {
 
 .familias-atendidas {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     margin-top: 20px; /* Ajuste conforme necessário */
     color: var(--cor-destaque);
+    font-weight: bold;
 }
 
 .familias-img {
