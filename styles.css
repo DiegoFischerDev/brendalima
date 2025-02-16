@@ -74,6 +74,7 @@ body {
 }
 
 .paralaxe {
+    width: 100%;
     background-image: url('assets/turistas.jpg'); /* Substitua pelo caminho correto da imagem */
     background-size: cover;
     background-position: center;
@@ -192,6 +193,9 @@ body {
 
     .paralaxe {
         background-image: url('assets/turistas_mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     .paralaxe h2 {
