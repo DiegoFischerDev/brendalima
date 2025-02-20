@@ -4,7 +4,7 @@
     --cor-azul-claro: #b1b6d8cf;
     --cor-destaque: #fbbb04;
     --cor-clara: #eae5e0;
-    --cor-branca: #f2f3f7;
+    --cor-branca: #ffffff;
 }
 
 body {
@@ -190,6 +190,7 @@ h1, h2, h3 {
 }
 
 .service-card {
+    background-color: var(--cor-branca);
     color: var(--cor-escura);
     border-radius: 10px;
     padding: 20px;
