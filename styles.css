@@ -1,17 +1,23 @@
 :root {
     --cor-escura: #0d141c;
     --cor-azul-escuro: #212e4e;
-    --cor-azul-claro: #b1b6d8;
-    --cor-destaque: #d1a965;
+    --cor-azul-claro: #b1b6d8cf;
+    --cor-destaque: #fbbb04;
     --cor-clara: #eae5e0;
     --cor-branca: #f2f3f7;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--cor-clara);
     color: var(--cor-escura);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .logo {
@@ -26,46 +32,50 @@ body {
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto; /* Centraliza a seção */
     display: flex;
     justify-content: center; /* Altera para espaço entre */
     align-items: center;
     background-color: var(--cor-branca);
     color: var(--cor-escura);
-    padding: 60px 20px;
+    padding: 0px 20px;
 }
 
 .hero h1 {
     color: var(--cor-azul-escuro);
-    font-size: 65px;
+    font-size: 35px;
     margin: 0;
 }
 
 .hero p {
-    color: var(cor-escura);
+    color: var(--cor-escura);
     font-size: 24px;
-    margin: 20px 0;
+    margin: 0px 20px 20px 20px;
 }
 
 .btn {
-    background-color: var(--cor-azul-claro);
-    color: var(--cor-escura);
-    padding: 10px 20px;
+    background: linear-gradient(to right, #016108, #03a011);
+    color: var(--cor-branca);
+    padding: 15px 30px; /* Aumentar o padding para um botão mais largo */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: normal;
+    font-size: 1em;
+    display: inline-flex; /* Para alinhar o ícone e o texto */
+    align-items: center; /* Centraliza verticalmente */
+    transition: background-color 0.3s; /* Efeito de transição suave */
     margin-top: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.4em;
 }
 
 .btn:hover {
-    background-color: var(--cor-azul-escuro);
-    color: var(--cor-clara);
+    background: linear-gradient(to right, #01870a, #05c715);
+    color: var(--cor-branca);
+}
+
+.btn img {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    width: 25px; /* Ajuste o tamanho do ícone */
 }
 
 .hero-content {
@@ -88,13 +98,11 @@ body {
 
 #brasao {
     width: 120px;
-    position: absolute;
-    top: 20px;
-    right: -10px;
 }
 
-.image img {
+.brenda-image img {
     width: 100%;
+    margin-bottom: -20px;
 }
 
 .familias-atendidas {
@@ -136,7 +144,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Efeito de opacidade */
+    background-color: #b1b6d8be; /* Efeito de opacidade */
     z-index: 1; /* Coloca a camada de opacidade abaixo do texto */
 }
 
@@ -149,7 +157,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    color: var(--cor-branca);
 }
 
 .paralaxe h2 {
@@ -168,7 +177,7 @@ body {
 }
 
 .service {
-    padding: 100px 0;
+    padding: 50px 0;
     background-color: var(--cor-branca);
 }
 
@@ -184,9 +193,10 @@ body {
     color: var(--cor-escura);
     border-radius: 10px;
     padding: 20px;
-    margin: 10px; /* Ajuste a margem para espaçamento consistente */
-    width: 300px; /* Define uma largura fixa para os cards */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: 80%;
+    max-width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição suave */
     text-align: center;
     display: flex;
@@ -194,24 +204,24 @@ body {
     align-items: center;
 }
 
-.service h2 {
-    font-size: 32px;
-    text-align: center;
-}
-
 .service-card h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.service-card:hover {
-    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+.service-card p {
+    text-align: left;
 }
 
-.service-card img {
+.service-card:hover {
+    transform: translateY(-3px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-img {
     max-width: 100%;
-    height: auto; /* Ajusta a altura automaticamente */
+    height: 200px; /* Defina uma altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem mantenha a proporção e preencha o espaço */
     border-radius: 10px; /* Bordas arredondadas para a imagem */
     margin-bottom: 15px; /* Espaçamento abaixo da imagem */
 }
@@ -223,33 +233,88 @@ body {
 }
 
 .testimonials {
-    background-color: var(--cor-escura);
+    background-color: var(--cor-azul-claro);
+    color: var(--cor-escura);
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cor-branca);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Layout responsivo */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    color: var(--cor-escura);
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin: 0 0 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: var(--cor-destaque); /* Mudando a cor das estrelas para a cor de destaque */
+    margin-right: 2px;
+}
+
+.rating-value {
+    font-weight: bold;
+    margin-left: 5px;
+    color: var(--cor-destaque); /* Mudando a cor da nota para a cor de destaque */
+}
+
+.intro-text {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px;
+}
+
+.service-btn {
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branca);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.service-btn:hover {
+    background-color: var(--cor-azul-claro);
     color: var(--cor-clara);
-    padding: 60px 20px;
+}
+
+.service-title {
+    font-size: 32px;
     text-align: center;
 }
 
-.testimonials h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.testimonial {
-    margin: 20px 0;
-    font-style: italic;
-}
-
-.testimonial span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
 @media (max-width: 768px) {
-    .hero {
-        padding: 20px;
-        padding: 15% 0;
-    }
 
     .familias-atendidas {
         font-size: 14px;
@@ -266,7 +331,6 @@ body {
     .hero-content {
         max-width: 100vw;
         height: 100%;
-        margin: 20px;
         padding-top: 30px;
         flex-direction: column;
     }
@@ -300,9 +364,9 @@ body {
         font-size: 40px;
         margin: 0;
     }
-    
+
     .hero p {
-        color: var(cor-escura);
+        color: var(--cor-escura);
         font-size: 20px;
         margin: 10px 0;
     }
@@ -316,5 +380,9 @@ body {
 
     .paralaxe h2 {
         font-size: 32px;
+    }
+
+    .service-title {
+        font-size: 24px; /* Tamanho menor para dispositivos móveis */
     }
 }
