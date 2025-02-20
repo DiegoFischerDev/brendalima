@@ -315,7 +315,29 @@ h1, h2, h3 {
     text-align: center;
 }
 
+#mobile-btn {
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    #desktop-btn {
+        display: none;
+    }
+
+    #mobile-btn {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .paralaxe {
+        padding: 40px 20px;
+    }
 
     .familias-atendidas {
         font-size: 14px;
