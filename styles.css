@@ -11,7 +11,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: var(--cor-clara);
-    color: var(--cor-escura);
+    color: var(--cor-azul-escuro);
 }
 
 h1, h2, h3 {
@@ -20,15 +20,12 @@ h1, h2, h3 {
     font-style: italic;
 }
 
-.logo {
-    font-size: 1.5em;
-    color: var(--cor-escura);
-}
-
-.logo-img {
-    height: 50px; /* Ajuste a altura conforme necessário */
-    margin-right: 10px; /* Espaçamento entre a logo e o texto */
-    vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+.sub-title {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .hero {
@@ -38,18 +35,15 @@ h1, h2, h3 {
     justify-content: center; /* Altera para espaço entre */
     align-items: center;
     background-color: var(--cor-branca);
-    color: var(--cor-escura);
     padding: 0px 20px;
 }
 
 .hero h1 {
-    color: var(--cor-azul-escuro);
     font-size: 35px;
     margin: 0;
 }
 
 .hero p {
-    color: var(--cor-escura);
     font-size: 24px;
     margin: 0px 20px 20px 20px;
 }
@@ -86,7 +80,7 @@ h1, h2, h3 {
 }
 
 .hero-content .textarea {
-    width: 50%;
+    width: 60%;
     height: 100%;
     text-align: left;
     display: flex;
@@ -114,10 +108,6 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
-.familias-atendidas span {
-    color: var(--cor-azul-claro);
-}
-
 .familias-img {
     height: 50px; /* Ajuste a altura conforme necessário */
     margin-right: 10px; /* Espaçamento entre a imagem e o texto */
@@ -128,7 +118,6 @@ h1, h2, h3 {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Adiciona o efeito de paralaxe */
-    color: var(--cor-clara);
     padding: 100px 20px;
     text-align: left;
     position: relative;
@@ -158,7 +147,6 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    color: var(--cor-branca);
 }
 
 .paralaxe h2 {
@@ -191,7 +179,6 @@ h1, h2, h3 {
 
 .service-card {
     background-color: var(--cor-branca);
-    color: var(--cor-escura);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
@@ -235,13 +222,11 @@ h1, h2, h3 {
 
 .testimonials {
     background-color: var(--cor-azul-claro);
-    color: var(--cor-escura);
-    padding: 30px 20px;
+    padding: 50px 20px 80px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--cor-branca);
 }
 
 .testimonial-grid {
@@ -257,7 +242,6 @@ h1, h2, h3 {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    color: var(--cor-escura);
     position: relative;
 }
 
@@ -277,37 +261,14 @@ h1, h2, h3 {
 }
 
 .star {
-    color: var(--cor-destaque); /* Mudando a cor das estrelas para a cor de destaque */
+    color: var(--cor-destaque);
     margin-right: 2px;
 }
 
 .rating-value {
     font-weight: bold;
     margin-left: 5px;
-    color: var(--cor-destaque); /* Mudando a cor da nota para a cor de destaque */
-}
-
-.intro-text {
-    font-size: 1.2em;
-    text-align: center;
-    margin: 20px;
-}
-
-.service-btn {
-    background-color: var(--cor-azul-escuro);
-    color: var(--cor-branca);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-.service-btn:hover {
-    background-color: var(--cor-azul-claro);
-    color: var(--cor-clara);
+    color: var(--cor-destaque);
 }
 
 .service-title {
@@ -317,6 +278,45 @@ h1, h2, h3 {
 
 #mobile-btn {
     display: none;
+}
+
+.footer {
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branca);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content span {
+    text-decoration: none;
+    color: var(--cor-branca);
+}
+
+.social-links {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: var(--cor-branca);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links img {
+    width: 24px; /* Ajuste o tamanho do ícone */
+    height: 24px;
 }
 
 @media (max-width: 768px) {
