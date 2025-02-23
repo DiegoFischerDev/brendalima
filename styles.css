@@ -133,7 +133,7 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #b1b6d8be; /* Efeito de opacidade */
+    background-color: #b1b6d8ea; /* Efeito de opacidade */
     z-index: 1; /* Coloca a camada de opacidade abaixo do texto */
 }
 
@@ -293,7 +293,7 @@ h1, h2, h3 {
 
 .footer-content span {
     text-decoration: none;
-    color: var(--cor-branca);
+    color: var(--cor-azul-claro);
 }
 
 .social-links {
@@ -407,5 +407,9 @@ h1, h2, h3 {
 
     .service-title {
         font-size: 24px; /* Tamanho menor para dispositivos móveis */
+    }
+
+    .social-links {
+        flex-direction: column;
     }
 }
