@@ -39,6 +39,7 @@ h1, h2, h3 {
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     padding: 0px 20px;
+    overflow-x: hidden;
 }
 
 .hero h1 {
@@ -425,7 +426,6 @@ h1, h2, h3 {
     .hero-content {
         width: 100%;
         flex-direction: column;
-        padding: 0px 20px;
     }
     
     .textarea {
@@ -456,7 +456,7 @@ h1, h2, h3 {
     
     .brenda-image #especialista {
         height: 50vh;
-        right: -60px;
+        right: -40px;
     }
     
     .familias-atendidas {
