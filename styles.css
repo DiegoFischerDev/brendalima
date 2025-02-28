@@ -409,7 +409,7 @@ h1, h2, h3 {
     
     .btn {
         font-weight: normal;
-        font-size: 0.7em;
+        font-size: 1em;
         margin-top: 0px;
     }
     
@@ -486,6 +486,7 @@ h1, h2, h3 {
     }
 
     #gradiente_hero_mobile {
+        display: block;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -496,15 +497,33 @@ h1, h2, h3 {
     }
     
     .paralaxe {
-        background-image: url('assets/turistas_mobile.jpg');
-        padding: 40px 20px;
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
+        background-image: url('assets/turistas_mobile.jpg'); /* Substitua pelo caminho correto da imagem */
+        width: 100%;
+        overflow-x: hidden;
     }
-
+    
+    .paralaxe-content {
+        gap: 40px;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+    
     .paralaxe h2 {
-        font-size: 32px;
+        font-size: 2rem;
+        margin: 0;
+        color: var(--cor-clara);
+        width: 100%;
+        line-height: 1.2;
+        margin-top: 0px;
+    }
+    
+    .paralaxe p {
+        font-size: 1.2rem;
+        width: 100%;
+        color: var(--cor-clara);
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 40px !important;
     }
 
     .service-title {
