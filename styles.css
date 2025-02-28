@@ -410,7 +410,8 @@ h1, h2, h3 {
     .btn {
         font-weight: normal;
         font-size: 0.8em;
-        margin-top: 0px;                    
+        margin-top: 0px;
+        padding: 10px 20px;
     }
     
     .btn:hover {
