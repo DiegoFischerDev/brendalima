@@ -409,8 +409,8 @@ h1, h2, h3 {
     
     .btn {
         font-weight: normal;
-        font-size: 1em;
-        margin-top: 0px;
+        font-size: 0.8em;
+        margin-top: 0px;                    
     }
     
     .btn:hover {
@@ -498,7 +498,7 @@ h1, h2, h3 {
     
     .paralaxe {
         background-image: url('assets/turistas_mobile.jpg'); /* Substitua pelo caminho correto da imagem */
-        width: 100%;
+        width: 100%vw;
         overflow-x: hidden;
     }
     
