@@ -442,10 +442,10 @@ h1, h2, h3 {
     }
     
     #brasao {
-        width: 16vw;
+        width: 150px;
         position: absolute;
-        top: 60px;
-        left: -180px;
+        top: -250px;
+        left: 0px;
         z-index: 1;
     }
     
@@ -455,8 +455,8 @@ h1, h2, h3 {
     }
     
     .brenda-image #especialista {
-        height: 60vh;
-        right: -20px;
+        height: 50vh;
+        right: -40px;
     }
     
     .familias-atendidas {
