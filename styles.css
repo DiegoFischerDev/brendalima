@@ -474,7 +474,11 @@ h1, h2, h3 {
     .telefone-atendimento {
         bottom: 50px;
         left: 10px;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+    }
+
+    .telefone-atendimento p{
+        text-decoration: none;
     }
 
     #gradiente_hero_pc {
