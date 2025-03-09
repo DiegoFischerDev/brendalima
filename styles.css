@@ -757,4 +757,9 @@ h1, h2, h3 {
     .about-text p {
         font-size: 1rem;
     }
+
+    .chat-button {
+        bottom: 10px;
+        right: 10px;
+    }
 }
