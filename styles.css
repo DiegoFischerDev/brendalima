@@ -522,6 +522,7 @@ h1, h2, h3 {
     border: 1px solid var(--cor-azul-escuro);
     border-radius: 5px;
     height: 30px;
+    font-size: 16px; /* Tamanho mínimo para evitar zoom no iOS */
 }
 
 .send-message {
