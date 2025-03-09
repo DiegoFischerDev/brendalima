@@ -447,24 +447,24 @@ h1, h2, h3 {
     font-size: 1rem;
 }
 
-.whatsapp-button {
+.chat-button {
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 20px; /* Distância do fundo */
-    right: 20px; /* Distância da direita */
-    border-radius: 50%; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
-    z-index: 1000; /* Para garantir que fique acima de outros elementos */
-    cursor: pointer /* Certifique-se de que isso esteja aqui */
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
 }
 
-.whatsapp-button img {
-    width: 50px; /* Tamanho do ícone */
-    height: 50px; /* Tamanho do ícone */
+.chat-button img {
+    width: 50px;
+    height: 50px;
 }
 
 .chat-box {

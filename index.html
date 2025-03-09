@@ -261,9 +261,9 @@
         </div>
     </footer>
 
-    <!-- Botão do WhatsApp -->
-    <a href="#" class="whatsapp-button" id="whatsapp-button">
-        <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+    <!-- Chat Button -->
+    <a href="#" class="chat-button" id="chat-button">
+        <img src="assets/chat-icon.png" alt="Chat Icon">
     </a>
 
     <!-- Caixa de Mensagem -->
@@ -298,18 +298,27 @@
     </div>
 
     <script>
-        // Adicionar variáveis para armazenar os timestamps
+        // Adicionar variáveis para armazenar os timestamps e controle de scroll
         let isFirstChatOpen = true;
         let initialTimestamp = '';
         let secondTimestamp = '';
+        let hasOpenedByScroll = false; // Nova variável para controlar se já abriu por scroll
 
         document.addEventListener('scroll', function () {
-            const chatBox = document.getElementById('chat-box');
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
+            if (!hasOpenedByScroll) { // Verifica se ainda não abriu por scroll
+                const chatBox = document.getElementById('chat-box');
 
-            if (scrollPosition >= documentHeight) {
-                showChat();
+                // Só abre se o chat estiver fechado E ainda não tiver sido aberto por scroll
+                if (chatBox.classList.contains('hidden')) {
+                    const scrollPosition = window.scrollY + window.innerHeight;
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+                    if (scrollPercentage >= 70) {
+                        showChat();
+                        hasOpenedByScroll = true; // Marca que já abriu por scroll
+                    }
+                }
             }
         });
 
@@ -324,7 +333,7 @@
             window.open(whatsappLink, '_blank');
         });
 
-        document.getElementById('whatsapp-button').addEventListener('click', function (event) {
+        document.getElementById('chat-button').addEventListener('click', function (event) {
             event.preventDefault();
             showChat();
         });
