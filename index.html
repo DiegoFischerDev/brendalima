@@ -265,6 +265,7 @@
     <!-- Chat Button -->
     <a href="#" class="chat-button" id="chat-button">
         <img src="assets/chat-icon.png" alt="Chat Icon">
+        <span id="message-counter" class="message-counter hidden">2</span>
     </a>
 
     <!-- Caixa de Mensagem -->
@@ -347,6 +348,10 @@
             const helpContainer = document.getElementById('help-container');
             const messageTimestamp = document.getElementById('message-timestamp');
             const helpTimestamp = document.getElementById('help-timestamp');
+            const messageCounter = document.getElementById('message-counter');
+
+            // Esconde o contador quando abrir o chat
+            messageCounter.classList.add('hidden');
 
             // Mostra a caixa de chat
             chatBox.classList.remove('hidden');
@@ -381,11 +386,21 @@
                     helpContainer.classList.remove('hidden');
                     helpTimestamp.textContent = secondTimestamp;
                     notificationSound.play();
+
+                    // Mostra o contador quando as duas mensagens estiverem visíveis
+                    if (!chatBox.classList.contains('hidden')) {
+                        messageCounter.classList.remove('hidden');
+                    }
                 }, 10000);
                 isFirstChatOpen = false;
             } else {
                 helpContainer.classList.remove('hidden');
                 helpTimestamp.textContent = secondTimestamp;
+
+                // Mostra o contador quando reabrir com as duas mensagens
+                if (!chatBox.classList.contains('hidden')) {
+                    messageCounter.classList.remove('hidden');
+                }
             }
         }
 
@@ -393,10 +408,12 @@
             const typingMessage = document.getElementById('typing-message');
             const welcomeContainer = document.getElementById('welcome-container');
             const helpContainer = document.getElementById('help-container');
+            const messageCounter = document.getElementById('message-counter');
 
             typingMessage.classList.add('hidden');
             welcomeContainer.classList.add('hidden');
             helpContainer.classList.add('hidden');
+            messageCounter.classList.remove('hidden'); // Mostra o contador quando fechar o chat
             isFirstChatOpen = false;
         }
     </script>
