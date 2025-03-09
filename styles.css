@@ -482,12 +482,7 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 10px;
     transition: all 0.3s ease;
-}
-
-.chat-box div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    line-height: 1.2;
 }
 
 .chat-box img {
@@ -501,6 +496,11 @@ h1, h2, h3 {
 }
 
 .chat-box h4 {
+    margin: 0;
+}
+
+.chat-box span {
+    font-size: 0.8rem;
     margin: 0;
 }
 
@@ -553,7 +553,34 @@ h1, h2, h3 {
 }
 
 .hidden {
-    display: none; /* Esconde a caixa inicialmente */
+    display: none !important; /* Esconde a caixa inicialmente */
+}
+
+.welcome-container {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.typing-message {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 8px 0;
+}
+
+#chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.message-timestamp {
+    color: #666;
+    font-size: 0.8em;
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {

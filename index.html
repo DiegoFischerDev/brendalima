@@ -269,47 +269,123 @@
     <!-- Caixa de Mensagem -->
     <div id="chat-box" class="chat-box hidden">
         <div class="chat-header">
-            <div>
-                <img src="assets/brenda-perfil.jpeg" alt="Brenda Lima Advogada de Imigração">
-                <div class="chat-header-text">
-                    <h4>Brenda Lima</h4>
-                    <p>online</p>
-                </div>
+            <div class="chat-header-text">
+                <h4>Dra. Brenda Lima</h4>
+                <p>online</p>
             </div>
             <button id="close-chat" class="close-chat">✖</button>
         </div>
-        <p>Olá, posso te ajudar?</p>
+        <div id="chat-messages">
+            <div id="welcome-container" class="welcome-container">
+                <img src="assets/brenda-perfil.jpeg" alt="Brenda Lima Advogada de Imigração">
+                <div>
+                    <p id="welcome-message">Olá</p>
+                    <span id="message-timestamp" class="message-timestamp"></span>
+                </div>
+            </div>
+            <p id="typing-message" class="typing-message">Brenda Lima está digitando...</p>
+            <div id="help-container" class="welcome-container hidden">
+                <img src="assets/brenda-perfil.jpeg" alt="Brenda Lima Advogada de Imigração">
+                <div>
+                    <p id="help-message">Tens dúvidas sobre o processo de legalização? Como advogada, posso ajudar-te
+                    </p>
+                    <span id="help-timestamp" class="message-timestamp"></span>
+                </div>
+            </div>
+        </div>
         <input type="text" id="user-message" placeholder="Digite sua mensagem...">
         <button id="send-message" class="send-message">Enviar</button>
     </div>
 
     <script>
+        // Adicionar variáveis para armazenar os timestamps
+        let isFirstChatOpen = true;
+        let initialTimestamp = '';
+        let secondTimestamp = '';
+
         document.addEventListener('scroll', function () {
             const chatBox = document.getElementById('chat-box');
             const scrollPosition = window.scrollY + window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
 
-            // Verifica se o usuário chegou ao final da página
             if (scrollPosition >= documentHeight) {
-                chatBox.classList.remove('hidden'); // Exibe a caixa de chat
+                showChat();
             }
         });
 
         document.getElementById('close-chat').addEventListener('click', function () {
-            document.getElementById('chat-box').classList.add('hidden'); // Fecha a caixa de chat
+            document.getElementById('chat-box').classList.add('hidden');
+            resetChatMessages();
         });
 
         document.getElementById('send-message').addEventListener('click', function () {
             const userMessage = document.getElementById('user-message').value;
             const whatsappLink = `https://wa.me/351910905908?text=${encodeURIComponent(userMessage)}`;
-            window.open(whatsappLink, '_blank'); // Abre o WhatsApp com a mensagem
+            window.open(whatsappLink, '_blank');
         });
 
-        // Novo código para abrir a caixa de chat ao clicar no botão do WhatsApp
         document.getElementById('whatsapp-button').addEventListener('click', function (event) {
-            event.preventDefault(); // Previne o comportamento padrão do link
-            document.getElementById('chat-box').classList.remove('hidden'); // Exibe a caixa de chat
+            event.preventDefault();
+            showChat();
         });
+
+        function showChat() {
+            const chatBox = document.getElementById('chat-box');
+            const typingMessage = document.getElementById('typing-message');
+            const welcomeContainer = document.getElementById('welcome-container');
+            const helpContainer = document.getElementById('help-container');
+            const messageTimestamp = document.getElementById('message-timestamp');
+            const helpTimestamp = document.getElementById('help-timestamp');
+
+            // Mostra a caixa de chat
+            chatBox.classList.remove('hidden');
+
+            if (isFirstChatOpen) {
+                // Calcula os timestamps apenas na primeira vez
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const day = now.getDate().toString().padStart(2, '0');
+                const month = (now.getMonth() + 1).toString().padStart(2, '0');
+                initialTimestamp = `${day}/${month} ${hours}:${minutes}`;
+
+                // Calcula o segundo timestamp com 15 segundos de diferença
+                const secondDate = new Date(now.getTime() + 15000);
+                const secondHours = secondDate.getHours().toString().padStart(2, '0');
+                const secondMinutes = secondDate.getMinutes().toString().padStart(2, '0');
+                const secondDay = secondDate.getDate().toString().padStart(2, '0');
+                const secondMonth = (secondDate.getMonth() + 1).toString().padStart(2, '0');
+                secondTimestamp = `${secondDay}/${secondMonth} ${secondHours}:${secondMinutes}`;
+            }
+
+            // Sempre usa os timestamps armazenados
+            messageTimestamp.textContent = initialTimestamp;
+            welcomeContainer.classList.remove('hidden');
+
+            if (isFirstChatOpen) {
+                typingMessage.classList.remove('hidden');
+                setTimeout(function () {
+                    typingMessage.classList.add('hidden');
+                    helpContainer.classList.remove('hidden');
+                    helpTimestamp.textContent = secondTimestamp;
+                }, 10000);
+                isFirstChatOpen = false;
+            } else {
+                helpContainer.classList.remove('hidden');
+                helpTimestamp.textContent = secondTimestamp;
+            }
+        }
+
+        function resetChatMessages() {
+            const typingMessage = document.getElementById('typing-message');
+            const welcomeContainer = document.getElementById('welcome-container');
+            const helpContainer = document.getElementById('help-container');
+
+            typingMessage.classList.add('hidden');
+            welcomeContainer.classList.add('hidden');
+            helpContainer.classList.add('hidden');
+            // Não resetamos isFirstChatOpen e os timestamps para manter o controle
+        }
     </script>
 </body>
 
