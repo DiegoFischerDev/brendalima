@@ -447,6 +447,101 @@ h1, h2, h3 {
     font-size: 1rem;
 }
 
+.whatsapp-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    border-radius: 50%; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+    cursor: pointer /* Certifique-se de que isso esteja aqui */
+}
+
+.whatsapp-button img {
+    width: 50px; /* Tamanho do ícone */
+    height: 50px; /* Tamanho do ícone */
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 20px; /* Acima do botão do WhatsApp */
+    right: 20px; /* Distância da direita */
+    width: 300px; /* Largura da caixa */
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-azul-escuro);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 2000; /* Para garantir que fique acima de outros elementos */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.chat-box div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-box p {
+    margin: 0;
+}
+
+.chat-box h4 {
+    margin: 0;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#user-message {
+    padding: 10px;
+    border: 1px solid var(--cor-azul-escuro);
+    border-radius: 5px;
+    height: 30px;
+}
+
+.send-message {
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branca);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-message:hover {
+    background-color: var(--cor-destaque);
+}
+
+.hidden {
+    display: none; /* Esconde a caixa inicialmente */
+}
+
 @media (max-width: 768px) {
     .hero {
         position: relative;
