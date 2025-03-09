@@ -510,6 +510,19 @@ h1, h2, h3 {
     align-items: center;
 }
 
+.chat-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start !important;
+    gap: 0px !important;
+    line-height: 1.2 !important;
+}
+
+.chat-header-text p {
+    font-size: 1rem !important;
+    color: green !important;
+}
+
 .close-chat {
     background: none;
     border: none;
