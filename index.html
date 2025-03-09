@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <audio id="notification-sound" src="assets/notification.mp3" preload="auto"></audio>
 </head>
 
 <body>
@@ -303,6 +304,7 @@
         let initialTimestamp = '';
         let secondTimestamp = '';
         let hasOpenedByScroll = false; // Nova variável para controlar se já abriu por scroll
+        const notificationSound = document.getElementById('notification-sound');
 
         document.addEventListener('scroll', function () {
             if (!hasOpenedByScroll) { // Verifica se ainda não abriu por scroll
@@ -372,11 +374,13 @@
             welcomeContainer.classList.remove('hidden');
 
             if (isFirstChatOpen) {
+                notificationSound.play();
                 typingMessage.classList.remove('hidden');
                 setTimeout(function () {
                     typingMessage.classList.add('hidden');
                     helpContainer.classList.remove('hidden');
                     helpTimestamp.textContent = secondTimestamp;
+                    notificationSound.play();
                 }, 10000);
                 isFirstChatOpen = false;
             } else {
@@ -393,7 +397,7 @@
             typingMessage.classList.add('hidden');
             welcomeContainer.classList.add('hidden');
             helpContainer.classList.add('hidden');
-            // Não resetamos isFirstChatOpen e os timestamps para manter o controle
+            isFirstChatOpen = false;
         }
     </script>
 </body>
