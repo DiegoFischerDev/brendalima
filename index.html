@@ -237,9 +237,54 @@
         </div>
     </section>
 
+    <section class="faq">
+        <div class="faq-content">
+            <p class="up-title">FAQ</p>
+            <h2 class="service-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Preciso mesmo contratar uma advogada para tratar do meu caso?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nem todos os casos exigem a presença de uma advogada, mas contar com uma profissional pode fazer toda a diferença. 
+                            A legislação de imigração em Portugal muda com frequência, e pequenos erros na documentação podem atrasar ou até 
+                            comprometer o processo. Se quer garantir que tudo seja feito corretamente e sem surpresas, uma advogada especializada 
+                            pode tornar o caminho muito mais seguro e tranquilo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        É melhor contratar uma advogada ou tentar resolver meu processo sozinho?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Isso depende da complexidade do seu caso. Algumas pessoas conseguem tratar de questões simples por conta própria, 
+                            mas processos de imigração envolvem muitos detalhes técnicos, prazos e requisitos específicos. 
+                            Um erro pode significar a recusa do pedido e atrasos que podem custar tempo e dinheiro. 
+                            Uma advogada experiente garante que tudo seja feito da forma correta desde o início, 
+                            aumentando suas chances de sucesso.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como posso marcar uma consulta com uma advogada especializada em imigração?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Agendar uma consulta é simples! Pode enviar um e-mail ou mesmo uma mensagem pelo WhatsApp. 
+                            Durante a consulta, analisarei o seu caso de forma personalizada e indicarei os melhores caminhos para a sua situação. 
+                            Quanto mais cedo iniciar o processo, melhor será o planeamento e mais tranquilo será o caminho até a sua legalização.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-content">
-            <h4>Dúvidas? Fale conosco</h4>
+            <h4>Fale conosco</h4>
             <div class="social-links">
                 <a href="https://wa.me/351910905908" class="social-link">
                     <img src="assets/whatsapp-icon.png" alt="Telefone">
@@ -416,6 +461,13 @@
             messageCounter.classList.remove('hidden'); // Mostra o contador quando fechar o chat
             isFirstChatOpen = false;
         }
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 
