@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="Portuguese">
+
     <!-- SEO Meta Tags Principais -->
     <title>Brenda Lima | Advogada de Imigração em Portugal - Vistos e Nacionalidade</title>
     <meta name="description"
@@ -57,11 +62,45 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <audio id="notification-sound" src="assets/notification.mp3" preload="auto"></audio>
+
+    <!-- LinkedIn Card -->
+    <meta property="linkedin:card" content="summary_large_image">
+    <meta property="linkedin:title" content="Brenda Lima - Advogada de Imigração em Portugal">
+    <meta property="linkedin:description"
+        content="Assessoria jurídica especializada em imigração para Portugal. Serviços de vistos, autorização de residência e nacionalidade portuguesa.">
+    <meta property="linkedin:image" content="https://brendalima.pt/assets/og-image.jpg">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Brenda Lima Advocacia",
+        "description": "Assessoria jurídica especializada em imigração para Portugal",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Estrada de Paço de Arcos 66/66A, Sala 150, BelaVista Office",
+            "addressLocality": "Sintra",
+            "postalCode": "2735-308",
+            "addressCountry": "PT"
+        },
+        "telephone": "+351910905908",
+        "url": "https://brendalima.pt",
+        "image": "https://brendalima.pt/assets/og-image.jpg",
+        "priceRange": "€€",
+        "areaServed": ["Portugal", "Brasil"],
+        "serviceType": ["Imigração", "Vistos", "Nacionalidade Portuguesa"]
+    }
+    </script>
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 </head>
 
 <body>
     <main>
         <section class="hero" aria-label="Seção principal">
+            <h1 class="visually-hidden">Brenda Lima | Advogada de Imigração em Portugal - Vistos e Nacionalidade</h1>
             <div class="hero-content">
                 <div class="textarea">
                     <img src="assets/hero/logo_brenda.png" alt="logo Brenda Lima advogada" class="hero-logo">
@@ -265,7 +304,9 @@
 
         <section class="about">
             <div class="about-content">
-                <img src="assets/brenda_about.jpeg" alt="Brenda Lima Advogada de Imigração">
+                <img src="assets/brenda_about.jpeg"
+                    alt="Brenda Lima Advogada de Imigração - Especialista em vistos e nacionalidade portuguesa"
+                    loading="lazy">
                 <div class="about-text">
                     <span>BRENDA LIMA</span>
                     <h2>Quem vai cuidar do teu caso?</h2>
@@ -360,7 +401,7 @@
                     <img src="assets/gmail.png" alt="Ícone do Gmail">
                     <p>info@brendalima.pt</p>
                 </a>
-                <a href="https://www.instagram.com/brendalima.pt/" target="_blank">
+                <a href="https://www.instagram.com/brendalima.pt/" target="_blank" rel="noopener noreferrer">
                     <img src="assets/instagram.png" alt="Ícone do Instagram">
                     <p>brendalima.pt</p>
                 </a>
@@ -370,6 +411,7 @@
             <span style="font-size: 12px">Brenda Lima © 2025 - Desenvolvido por <a
                     href="https://www.instagram.com/digitalizei.pt"
                     target="_blank"><span>digitalizei.pt</span></a></span>
+            <p class="visually-hidden">Última atualização: <time datetime="2024-03-21">21 de Março de 2024</time></p>
         </div>
     </footer>
 
